@@ -23,5 +23,27 @@ public class CinemaFacade {
 
     public void watchMovie() {
         popper.on();
+        popper.pop();
+        lights.dim(1);
+        screen.down();
+        projector.on();
+        projector.wideScreenMode();
+        amp.on();
+        amp.setDvd(dvd);
+        amp.setSurroundSound();
+        amp.setVolume(5);
+        dvd.on();
+        dvd.play("Now you see me");
+    }
+
+    public void stopWatchingMovie() {
+        popper.off();
+        lights.on();
+        screen.up();
+        projector.off();
+        amp.off();
+        dvd.stop();
+        dvd.eject();
+        dvd.off();
     }
 }

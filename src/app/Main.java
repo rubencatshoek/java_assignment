@@ -6,5 +6,7 @@ public class Main {
         CinemaFacade cinemaFacade = new CinemaFacade();
 
         cinemaFacade.watchMovie();
+        
+        cinemaFacade.stopWatchingMovie();
     }
 }
